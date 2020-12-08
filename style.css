@@ -1,0 +1,8 @@
+.lis {
+    display: flex;
+    flex-flow: row;
+}
+
+.lis h2 {
+    margin: 10px
+}

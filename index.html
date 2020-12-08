@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js" type="text/javascript"></script>
+
+
+<body ng-app="qgApp">
+
+    <div ng-controller="quotation">
+        <form ng-submit="addData()">
+
+            Name
+            <input type="text" ng-model="name"> Quantity
+            <input type="text" ng-model="quantity"> Rate
+            <input type="text" ng-model="rate">
+            <input type="submit" value="add">
+
+        </form>
+
+
+        <ul>
+            <li class="lis">
+                <h2>Name</h2>
+                <h2>Quantity</h2>
+                <h2>Rate</h2>
+            </li>
+
+
+            <li ng-repeat="q in quot" class="lis">
+
+                <h2>{{q.name}}</h2>
+                <h2>{{q.quantity}}</h2>
+                <h2>{{q.rate}}</h2>
+                <h2>{{q.quantity * q.rate}}</h2>
+
+            </li>
+        </ul>
+
+        <button ng-click="makePdf()">
+            MakePdf
+        </button>
+    </div>
+</body>
+
+</html>
