@@ -15,38 +15,73 @@
 
 <body ng-app="qgApp">
 
-    <div ng-controller="quotation">
-        <form ng-submit="addData()">
+    <div class="quote" ng-controller="quotation">
+        <h1 class="title t1">Quotation Sheet</h1>
 
-            Name
-            <input type="text" ng-model="name"> Quantity
-            <input type="text" ng-model="quantity"> Rate
-            <input type="text" ng-model="rate">
-            <input type="submit" value="add">
+        <form ng-submit="addData()">
+            <div class="inp">
+                Name
+                <input type="text" ng-model="name">
+            </div>
+            <div class="inp">
+
+                Quantity
+            </div>
+            <div class="inp">
+                <input type="text" ng-model="quantity">
+            </div>
+            <div class="inp">
+                Rate
+                <input type="text" ng-model="rate">
+            </div>
+            <div class="inp">
+
+
+                <button type="submit">ADD</button>
+            </div>
 
         </form>
 
 
         <ul>
-            <li class="lis">
-                <h2>Name</h2>
-                <h2>Quantity</h2>
-                <h2>Rate</h2>
-                <h2>Total</h2>
+            <li class="lis l">
+                <div class="header">
+                    <h2 class="val">Name</h2>
+                    <h2 class="val">Quantity</h2>
+                    <h2 class="val">Rate</h2>
+                    <h2 class="val">Amount </h2>
+
+                </div>
             </li>
+        </ul>
+
+        <div class="scroll">
+            <ul>
+                <li ng-repeat="q in quot" class="lis">
+                    <div class="header">
+
+                        <h2 class="val">{{q.name}}</h2>
+                        <h2 class="val">{{q.quantity}}</h2>
+                        <h2 class="val">{{q.rate}}</h2>
+                        <h2 class="val">{{q.quantity * q.rate}}</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
 
-            <li ng-repeat="q in quot" class="lis">
+        <ul>
+            <li class="lis l">
+                <div class="header total">
+                    <h2>Total--</h2>
+                    <h2> {{tot}}</h2>
 
-                <h2>{{q.name}}</h2>
-                <h2>{{q.quantity}}</h2>
-                <h2>{{q.rate}}</h2>
-                <h2>{{q.quantity * q.rate}}</h2>
+                </div>
 
             </li>
         </ul>
 
-        <button ng-click="makePdf()">
+        <button class="btn" ng-click="makePdf()">
             MakePdf
         </button>
     </div>

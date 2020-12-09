@@ -1,8 +1,149 @@
+body {
+    background-color: #02324b6b;
+    /* background-image: linear-gradient(to right, #2980b9, #2c3e50); */
+}
+
+.quote ul li {
+    display: flex;
+    flex-flow: row;
+}
+
+.title {
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    color: black
+}
+
+.val {
+    flex: 1;
+    color: #1f292e;
+    font-family: "Audiowide", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.l .val {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.l .header {
+    background-color: #ff0d00;
+}
+
+.quote form {
+    background-image: linear-gradient(to right, #1e3c72, #2a5298);
+    border: solid;
+    border-width: 2px;
+    border-color: #99b998;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 100px;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    background-color: #ffdda6;
+    background-image: linear-gradient(to right, #005C97, #363795);
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+}
+
+.quote ul {
+    padding: 0%;
+}
+
 .lis {
     display: flex;
     flex-flow: row;
 }
 
-.lis h2 {
-    margin: 10px
+.lis h3 {
+    margin: 10px;
+}
+
+.inp {
+    display: inline;
+    transform: translateX(0vw);
+    padding: 10px;
+    justify-content: left;
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.inp input {
+    width: 250px;
+    height: 20px;
+}
+
+.header.total {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.inp button,
+.btn {
+    color: #1f292e;
+    background-color: #99b998;
+    font-weight: bolder;
+    border: none;
+    padding: 5px 10px;
+}
+
+.btn {
+    padding: 20px 50px;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+
+.scroll {
+    overflow-y: scroll;
+    max-height: 35vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media screen and (min-width: 1000px) {
+    .quote {
+        margin: 50px 300px;
+    }
+    /* .tab{
+        
+        margin:50px 500px;
+        
+    } */
 }

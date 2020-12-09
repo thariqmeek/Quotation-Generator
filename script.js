@@ -5,6 +5,7 @@ app.controller('quotation', function($scope) {
     $scope.name = "me";
     $scope.quantity = "10";
     $scope.rate = "20";
+    $scope.tot = 0;
 
 
     $scope.addData = function() {
@@ -16,6 +17,7 @@ app.controller('quotation', function($scope) {
 
 
         })
+        $scope.tot = $scope.tot + ($scope.quantity * $scope.rate)
         $scope.name = ''
         $scope.quantity = ''
         $scope.rate = ''
